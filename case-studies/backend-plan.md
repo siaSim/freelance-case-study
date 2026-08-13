@@ -1,22 +1,22 @@
-# Backend Plan and Boundary
+# 백엔드 계획과 경계
 
-Status: Planned foundation — implementation not claimed
+상태: 계획된 기반 — 구현 완료를 주장하지 않음
 
-## Goal
+## 목표
 
-Create a backend that can replace the frontend's local content store with shared recipe and category persistence while preserving the existing async read boundary.
+프론트엔드의 로컬 콘텐츠 저장소를 공유 레시피·분류 저장소로 교체할 수 있는 백엔드를 만들고, 기존 비동기 읽기 경계를 유지합니다.
 
-## Proposed first contract
+## 제안하는 초기 계약
 
-These are proposed endpoints for the next implementation phase, not endpoints that currently exist.
+아래 엔드포인트는 다음 구현 단계에서 사용할 계획이며, 현재 존재하는 엔드포인트가 아닙니다.
 
-### Public reads
+### 공개 읽기
 
 - `GET /api/v1/recipes`
 - `GET /api/v1/recipes/{slug}`
 - `GET /api/v1/categories`
 
-### Authoring writes
+### 작성자용 쓰기
 
 - `POST /api/v1/admin/recipes`
 - `PATCH /api/v1/admin/recipes/{recipeId}`
@@ -25,40 +25,40 @@ These are proposed endpoints for the next implementation phase, not endpoints th
 - `PATCH /api/v1/admin/categories/{categoryId}`
 - `DELETE /api/v1/admin/categories/{categoryId}`
 
-The admin write routes require an explicit authentication and authorization design before they are used by the frontend.
+작성자용 쓰기 경로는 프론트엔드에서 사용하기 전에 명시적인 인증·권한 부여 설계가 필요합니다.
 
-## Compatibility target
+## 호환성 목표
 
-The frontend's current read API already exposes:
+현재 프론트엔드 읽기 API가 제공하는 동작은 다음과 같습니다.
 
-- recipe listing by category, sort, query, and limit;
-- recipe lookup by slug;
-- related recipes;
-- category listing;
-- category counts;
-- desktop and mobile hero selection;
-- lookup by recipe slugs.
+- 분류·정렬·검색어·제한 수를 사용한 레시피 목록 조회
+- slug를 사용한 레시피 조회
+- 관련 레시피 조회
+- 분류 목록 조회
+- 분류별 개수 조회
+- 데스크톱·모바일 히어로 선택
+- 레시피 slug 목록으로 조회
 
-The backend adapter should preserve these behaviors at the page-facing boundary and translate them into HTTP requests.
+백엔드 어댑터는 페이지가 사용하는 경계에서 이 동작을 유지하고 HTTP 요청으로 변환해야 합니다.
 
-## Persistence boundary
+## 데이터 책임 경계
 
-The backend should own:
+백엔드는 다음을 담당해야 합니다.
 
-- recipe and category persistence;
-- validation of recipe references and category relationships;
-- authorization for authoring writes;
-- auditability of edits;
-- versioned API responses.
+- 레시피와 분류의 영속 저장
+- 레시피 참조와 분류 관계 검증
+- 작성자용 쓰기의 권한 부여
+- 수정 이력 추적
+- 버전이 포함된 API 응답
 
-The frontend should own:
+프론트엔드는 다음을 담당해야 합니다.
 
-- rendering;
-- local UI state;
-- optimistic or pending states;
-- presentation-level filtering when explicitly chosen;
-- graceful loading and error states.
+- 화면 렌더링
+- 로컬 UI 상태
+- 낙관적 처리 또는 대기 상태
+- 명시적으로 선택한 경우의 화면 표시용 필터링
+- 로딩·오류 상태의 적절한 표시
 
-## Not yet claimed
+## 아직 주장하지 않는 내용
 
-No backend framework, database, deployment, authentication provider, production scale, or operational SLA is claimed in this document. Those decisions belong in reviewed issues and commits in the organization backend repository.
+이 문서에서는 백엔드 프레임워크, 데이터베이스, 배포, 인증 제공자, 운영 규모 또는 운영 수준 협약(SLA)을 정하지 않습니다. 이러한 결정은 조직 백엔드 저장소의 검토된 Issue와 커밋을 통해 확정해야 합니다.
