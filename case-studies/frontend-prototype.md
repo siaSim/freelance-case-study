@@ -1,46 +1,46 @@
-# Frontend Prototype
+# 프론트엔드 프로토타입
 
-Status: Implemented prototype
+상태: 구현된 프로토타입
 
-## Problem
+## 문제
 
-The project needs a recipe browsing experience that can be reviewed before the backend is connected. The frontend repository provides a visual and interactive prototype while keeping the future backend boundary explicit.
+백엔드 연결 전에 검토할 수 있는 레시피 탐색 경험이 필요합니다. 프론트엔드 저장소는 시각적·상호작용 프로토타입을 제공하면서 향후 백엔드 경계를 명확하게 유지합니다.
 
-## Implemented scope
+## 구현 범위
 
-The current README and source structure document the following routes and flows:
+현재 README와 소스 구조에 기록된 경로와 흐름은 다음과 같습니다.
 
-- Home with desktop and mobile hero variations.
-- Recipe browsing with category and sorting flows.
-- Recipe detail pages.
-- Cook mode.
-- Saved recipes.
-- Search.
-- Authoring screens under `/admin`, including recipe and category management and JSON backup/restore.
+- 데스크톱·모바일 히어로 영역이 있는 홈 화면
+- 분류와 정렬을 지원하는 레시피 탐색
+- 레시피 상세 화면
+- 쿡 모드
+- 저장한 레시피
+- 검색
+- `/admin` 아래의 작성자용 화면: 레시피·분류 관리와 JSON 백업·복원
 
-The repository is built with React, TypeScript, and Vite.
+저장소는 React·TypeScript·Vite로 구성되어 있습니다.
 
-## Content model
+## 콘텐츠 모델
 
-The public read API is already isolated behind `src/api/client.ts`. The client currently reads from `src/data/store.ts`, which keeps seed content plus a localStorage overlay. The client functions are asynchronous so a later backend adapter can replace the local implementation without changing the page-level API.
+공개 읽기 API는 이미 `src/api/client.ts` 뒤에 분리되어 있습니다. 현재 클라이언트는 시드 콘텐츠와 localStorage 오버레이를 관리하는 `src/data/store.ts`에서 데이터를 읽습니다. 클라이언트 함수는 비동기 형태이므로, 이후 페이지 수준 API를 바꾸지 않고 로컬 구현을 백엔드 어댑터로 교체할 수 있습니다.
 
-The current local authoring model is intentionally not treated as access control. The README states that the backend write endpoints must provide the real authorization boundary.
+현재 로컬 작성 모델은 접근 제어로 취급하지 않습니다. README에도 실제 권한 경계는 백엔드 쓰기 엔드포인트가 제공해야 한다고 명시되어 있습니다.
 
-## Important boundary
+## 중요한 경계
 
-At the current snapshot, the frontend is not connected to a backend. Recipe changes are local to the browser and are not a shared persistence mechanism.
+현재 시점의 프론트엔드는 백엔드에 연결되어 있지 않습니다. 레시피 변경 사항은 브라우저 안에만 저장되며, 여러 사용자가 공유하는 영속 저장 방식이 아닙니다.
 
-The case study therefore does not claim:
+따라서 이 케이스 스터디에서는 다음을 주장하지 않습니다.
 
-- production deployment;
-- shared multi-user persistence;
-- authentication or authorization;
-- production traffic or user counts;
-- backend implementation.
+- 운영 환경 배포
+- 여러 사용자가 공유하는 영속성
+- 인증 또는 권한 부여
+- 운영 트래픽이나 사용자 수
+- 백엔드 구현 완료
 
-## Review points
+## 검토 기준
 
-- Keep `src/api/client.ts` as the read contract when introducing the backend adapter.
-- Keep localStorage behavior isolated to the prototype/store layer.
-- Move admin writes behind authenticated backend endpoints before treating the authoring UI as a shared operational tool.
-- Preserve the distinction between a visual prototype and a production service.
+- 백엔드 어댑터를 도입할 때 `src/api/client.ts`를 읽기 계약으로 유지합니다.
+- localStorage 동작은 프로토타입·스토어 계층 안에 격리합니다.
+- 작성자 화면을 공동 운영 도구로 사용하기 전에 인증된 백엔드 엔드포인트 뒤로 쓰기 동작을 이동합니다.
+- 시각적 프로토타입과 운영 서비스의 차이를 계속 구분합니다.
