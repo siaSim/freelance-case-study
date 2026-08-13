@@ -11,11 +11,9 @@
 - 케이스 스터디: 포트폴리오 검토에 사용할 수 있는 공개 저장소입니다.
 - 협업: 협업자가 서비스 저장소를 검토하거나 확장할 수 있습니다.
 
-## 저장소 링크
+## 관련 구현
 
-- 프론트엔드 구현: [SiaSimFreenlance/recipe-site-frontend](https://github.com/SiaSimFreenlance/recipe-site-frontend)
-- 백엔드 구현: [SiaSimFreenlance/recipe-site-backend](https://github.com/SiaSimFreenlance/recipe-site-backend)
-- 케이스 스터디: [siaSim/freelance-case-study](https://github.com/siaSim/freelance-case-study)
+프론트엔드와 백엔드는 협업용 비공개 저장소에서 관리하며, 공개 가능한 구현 범위와 개인 기여 근거는 이 케이스 스터디에 정리했습니다.
 
 ## 케이스 스터디 문서
 
