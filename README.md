@@ -1,34 +1,32 @@
-# Jingu Recipe Service — Case Study
+# 프리랜스 레시피 서비스 — 케이스 스터디
 
-Evidence-based case study for the Jingu recipe service.
+프리랜스 레시피 서비스의 프론트엔드 프로토타입, 백엔드 계획, 협업 경계와 개인 기여 증거를 근거 중심으로 정리한 케이스 스터디입니다.
 
-This repository separates portfolio documentation from the collaborative implementation repositories. It records what is implemented, what is planned, and where personal contribution still needs to be confirmed through commits, pull requests, issues, and code paths.
+이 저장소는 협업 구현 저장소와 포트폴리오 문서를 분리합니다. 현재 구현된 내용, 향후 계획, 그리고 커밋·Pull Request·Issue·코드 경로를 통해 확인해야 하는 개인 기여를 구분해 기록합니다.
 
-## Current status
+## 현재 상태
 
-- Frontend prototype: implemented in the private organization repository.
-- Backend: repository created for the next implementation phase; backend implementation is not claimed here yet.
-- Case study: public and suitable for portfolio review.
-- Collaboration: the service repository may be reviewed or extended by the project collaborator.
+- 프론트엔드 프로토타입: 조직 비공개 저장소에 구현되어 있습니다.
+- 백엔드: 다음 구현 단계를 위한 저장소가 생성되었으며, 아직 백엔드 구현 완료를 주장하지 않습니다.
+- 케이스 스터디: 포트폴리오 검토에 사용할 수 있는 공개 저장소입니다.
+- 협업: 협업자가 서비스 저장소를 검토하거나 확장할 수 있습니다.
 
-## Repository links
+## 저장소 링크
 
-- Frontend implementation: [SiaSimFreenlance/recipe-site-frontend](https://github.com/SiaSimFreenlance/recipe-site-frontend)
-- Backend implementation: [SiaSimFreenlance/recipe-site-backend](https://github.com/SiaSimFreenlance/recipe-site-backend)
-- Case study: [siaSim/jingu-recipe-case-study](https://github.com/siaSim/jingu-recipe-case-study)
+- 프론트엔드 구현: [SiaSimFreenlance/recipe-site-frontend](https://github.com/SiaSimFreenlance/recipe-site-frontend)
+- 백엔드 구현: [SiaSimFreenlance/recipe-site-backend](https://github.com/SiaSimFreenlance/recipe-site-backend)
+- 케이스 스터디: [siaSim/freelance-case-study](https://github.com/siaSim/freelance-case-study)
 
-## Case studies
+## 케이스 스터디 문서
 
-- [Frontend prototype](case-studies/frontend-prototype.md)
-- [Backend plan and boundary](case-studies/backend-plan.md)
-- [Collaboration and contribution evidence](case-studies/collaboration-and-contribution.md)
+- [프론트엔드 프로토타입](case-studies/frontend-prototype.md)
+- [백엔드 계획과 경계](case-studies/backend-plan.md)
+- [협업과 기여 증거](case-studies/collaboration-and-contribution.md)
 
-## Evidence boundary
+## 근거 범위
 
-The current frontend README describes a React + TypeScript + Vite prototype with responsive home, browse, recipe detail, cook mode, saved recipes, search, and an author-only `/admin` route.
+현재 프론트엔드 README와 소스 구조에는 React·TypeScript·Vite 기반 프로토타입, 반응형 홈, 탐색, 레시피 상세, 쿡 모드, 저장한 레시피, 검색, 작성자 전용 `/admin` 경로가 기록되어 있습니다.
 
-The frontend currently uses seed content with a localStorage overlay. Its README explicitly states that the backend is not implemented yet. The backend document in this repository is therefore a plan, not a production claim.
+현재 프론트엔드는 시드 콘텐츠와 localStorage 오버레이를 사용합니다. README에도 백엔드가 아직 구현되지 않았다고 명시되어 있습니다. 따라서 이 저장소의 백엔드 문서는 계획이며, 구현 완료를 의미하지 않습니다.
 
-The repository history currently shows commits attributed to `siaSim` and `claude`. This case study keeps implementation claims separate from collaboration and records personal ownership through reviewable GitHub evidence.
-# jingu-recipe-case-study
-Evidence-based case study for the Jingu recipe service, covering the frontend prototype, backend planning, collaboration boundary, and implementation decisions.
+현재 저장소 이력에는 `siaSim`과 `claude`가 작성자로 표시된 커밋이 있습니다. 이 케이스 스터디는 구현·협업·개인 기여에 대한 주장을 구분하고, 검토 가능한 GitHub 근거를 기준으로 개인 기여를 기록합니다.
