@@ -1,37 +1,37 @@
-# Collaboration and Contribution Evidence
+# 협업과 기여 증거
 
-## Why this document exists
+## 이 문서의 목적
 
-The service is maintained in an organization repository so the collaborator can review or contribute to the work. The public case study is intentionally separate from the implementation repository.
+이 서비스는 협업자가 작업을 검토하거나 기여할 수 있도록 조직 저장소에서 관리합니다. 공개 케이스 스터디는 구현 저장소와 의도적으로 분리합니다.
 
-## Current evidence
+## 현재 확인된 근거
 
-- Organization: `SiaSimFreenlance`
-- Frontend repository: `recipe-site-frontend`
-- Backend repository: `recipe-site-backend`
-- Personal case study repository: `jingu-recipe-case-study`
-- The frontend repository history currently shows commits attributed to `siaSim` and `claude`.
+- 조직: `SiaSimFreenlance`
+- 프론트엔드 저장소: `recipe-site-frontend`
+- 백엔드 저장소: `recipe-site-backend`
+- 개인 케이스 스터디 저장소: `freelance-case-study`
+- 현재 프론트엔드 저장소 이력에는 `siaSim`과 `claude`가 작성자로 표시된 커밋이 있습니다.
 
-## Working rule
+## 작업 원칙
 
-A personal portfolio claim should be backed by one or more of:
+개인 포트폴리오의 주장은 다음 근거 중 하나 이상으로 뒷받침해야 합니다.
 
-- a commit authored by the person;
-- a pull request with a reviewable diff;
-- an issue with a clear implementation link;
-- a code path that can be explained and verified;
-- a test or validation result.
+- 본인이 작성자로 표시된 커밋
+- 검토 가능한 변경 내용이 있는 Pull Request
+- 구현 연결이 명확한 Issue
+- 설명하고 검증할 수 있는 코드 경로
+- 테스트 또는 검증 결과
 
-A collaborator's work should remain separately described. The case study should not convert team activity into an individual ownership claim.
+협업자의 작업은 별도로 설명해야 합니다. 팀의 활동을 개인 소유권 주장으로 바꾸어 기록하지 않습니다.
 
-## Suggested evidence routine
+## 권장 근거 기록 절차
 
-1. Open an issue before a non-trivial backend or frontend change.
-2. Work on a branch named for the issue.
-3. Link the pull request to the issue.
-4. Record the relevant code paths and verification commands.
-5. Update the case study only after the implementation evidence exists.
+1. 규모가 있는 백엔드·프론트엔드 변경 전에 Issue를 엽니다.
+2. Issue와 연결된 브랜치에서 작업합니다.
+3. Pull Request를 Issue에 연결합니다.
+4. 관련 코드 경로와 검증 명령을 기록합니다.
+5. 구현 근거가 생긴 뒤에만 케이스 스터디를 업데이트합니다.
 
-## Current limitation
+## 현재 한계
 
-This repository documents the current boundary and plan. It does not assert that the backend is complete or that every frontend file was individually authored by one person.
+이 저장소는 현재 경계와 계획을 문서화합니다. 백엔드가 완성되었다거나, 프론트엔드의 모든 파일을 한 사람이 작성했다는 주장을 하지 않습니다.
